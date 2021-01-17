@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manchester united manager</title>
+</head>
+<style>
+    .upda{
+        background-color: green;
+    }
+    .dele{
+        background-color: red;
+    }
+    form{
+        width: 100%;
+        padding: 0 15px;
+        background-size: 0 40px;
+        border-width: 10px 10px;
+        text-align: center;
+    }
+    img{
+        width: 30px;
+    }
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    table{
+        border-color: dodgerblue;
+        margin: 0 15px;
+    }
+    .img2{
+        width: 70px;
+    }
+    .trans{
+        text-align: left;
+    }
+    .times{
+        font-size: 12px;
+        text-align: left;
+        color: #eeeeee;
+    }
+    .content{
+        display: flex;
+    }
+    .title{
+        color: red;
+        padding: 25px 5px;
+    }
+    .tab{
+        width: 65%;
+        float: right;
+        text-align: center;
+    }
+    .number{
+        font-weight: 800;
+        font-size: 24px;
+    }
+    .text-right{
+        float: right;
+    }
+    .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+        padding: 15px;
+        line-height: 1.42857143;
+        vertical-align: top;
+        border-top: 2px solid #BF123D;
+        border-bottom: 2px solid #BF123D;
+    }
+    .manu{
+        background-color: #BF123D ;
+        font-weight: 300;
+        font-size: 14px;
+    }
+    .age{
+        background-color: rgba(6,16,43,0.6);
+        font-weight: 300;
+        font-size: 14px;
+    }
+    .profile{
+        background:  url("https://www.vbetnews.com/wp-content/uploads/2019/12/skysports-ole-gunnar-solskjaer_4762890-1.jpg");
+
+    }
+    body{
+        background-color: #10171f;
+    }
+</style>
+<body>
+<div class="content">
+<img class="img2" src="https://lh3.googleusercontent.com/KNyKMfQqqVcLYAROYJ6KPW7nqmyMMcuc7npdzuzYI9KXhnZDJ3Wkfqy_apcQTDgq2QlNp9LzqQly06N5qsNxUOLT">
+<h5 class="title">MANCHESTER UNITED - MAIN SQUAD MANAGER</h5>
+    <p class="times" id="hvn"></p>
+</div>
+    <form>
+    <fieldset>
+        <legend class="trans">Transfer</legend>
+        <input type="text" id="player's-name" placeholder="Input player's name..." size="19px">
+        <input type="text" id="player's-position " placeholder="Input player's position..." size="19">
+        <input type="text" id="player's-age" placeholder="Input player's age..." size="19">
+        <input type="text" id="player's-wage" placeholder="Input player's wage..." size="19">
+        <input type="text" id="player's-skill" placeholder="Input player's skill..." size="19">
+        <input type="text" id="player's-country" placeholder="Input player's country..." size="19">
+        <input type="text" id="player's-img" placeholder="Input player's img..." size="19">
+        <button type="button" onclick="addPlayer()">Add</button>
+    </fieldset>
+</form>
+
+<table id = "list" border="1px solid red" class="tab"></table>
+<section class="profile">
+    <table class="table">
+        <tr class="manu">
+            <td colspan="2"><span class="number">#20</span><span class="number text-right">Ole Gunnar Solskjaer</span> </td>
+        </tr>
+        <tr class="age">
+            <td><span class="number">Manchester United</span><br>Manager</td>
+            <td><span class="number">48</span><br>AGE</td>
+        </tr>
+        <tr class="manu">
+            <td colspan="2"><span class="number">366</span><br>APPEARANCES</td>
+        </tr>
+        <tr class="age">
+            <td><span class="number">126</span><br>GOALS</td>
+            <td><span class="number">70</span><br>ASSISTS</td>
+        </tr>
+        <tr class="manu">
+            <td colspan="2"><span class="number">Clausenengen</span><br>CAREER STARTED AT</td>
+        </tr>
+        <tr class="age">
+            <td><span class="number">ACHIEVEMENTS MIGHTY</span><br>1998-99 seasonThe historic treble</td>
+            <td><span class="number">The historic treble</span><br></td>
+        </tr>
+        <tr class="manu">
+            <td colspan="2"><span class="number">2007</span><br>Retired from career</td>
+        </tr>
+    </table>
+</section>
+
+</body>
+</html>
+<script src="soccer.js"></script>
