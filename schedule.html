@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Schedule</title>
+</head>
+<body>
+<!--start calendar-->
+<table class="calendar">
+    <tr>
+        <th colspan="5">Schedule</th>
+    </tr>
+    <tr>
+        <td>LEICESTER...</td>
+        <td><img class="img2" src="https://givetour.s3.amazonaws.com/UploadFiles/Competitors/138974.png" alt="Leicester City"></td>
+        <td>2 - 2</td>
+        <td><img class="img2" src="https://givetour.s3.amazonaws.com/UploadFiles/Competitors/138976.jpg" alt="Manchester U"></td>
+        <td>MANCHESTER U</td>
+    </tr>
+    <tr>
+        <td>MANCHESTER U</td>
+        <td ><img class="img2" src="https://givetour.s3.amazonaws.com/UploadFiles/Competitors/138976.jpg" alt="Manchester U"></td>
+        <td>2 - 1</td>
+        <td><img class="img2" src="https://givetour.s3.amazonaws.com/UploadFiles/Competitors/138966.png" alt="Aston Villa"></td>
+        <td>ASTON VILLA</td>
+    </tr>
+    <tr>
+        <td>LIVERPOOL</td>
+        <td><img class="img2" src="https://givetour.s3.amazonaws.com/UploadFiles/Competitors/138975.png" alt="Liverpool"></td>
+        <td>0 - 0</td>
+        <td><img class="img2" src="https://givetour.s3.amazonaws.com/UploadFiles/Competitors/138976.jpg" alt="Manchester U"></td>
+        <td>MANCHESTER U</td>
+    </tr>
+    <tr>
+        <td>FULHAM</td>
+        <td><img class="img2" src="https://givetour.s3.amazonaws.com/UploadFiles/Competitors/138972.png" alt="Fulham"></td>
+        <td></td>
+        <td><img class="img2" src="https://givetour.s3.amazonaws.com/UploadFiles/Competitors/138976.jpg" alt="Manchester U"></td>
+        <td>MANCHESTER U</td>
+    </tr>
+    <tr>
+        <td>MANCHESTER U</td>
+        <td><img class="img2" src="https://givetour.s3.amazonaws.com/UploadFiles/Competitors/138976.jpg" alt="Manchester U"></td>
+        <td>28/1</td>
+        <td><img class="img2" src="https://givetour.s3.amazonaws.com/UploadFiles/Competitors/138960.png" alt="Sheffield"></td>
+        <td>SHEFFIELD</td>
+    </tr>
+    <tr>
+        <td>ASENAL</td>
+        <td><img class="img2" src="https://givetour.s3.amazonaws.com/UploadFiles/Competitors/138957.png" alt="Asenal"></td>
+        <td></td>
+        <td><img class="img2" src="https://givetour.s3.amazonaws.com/UploadFiles/Competitors/138976.jpg" alt="Manchester U"></td>
+        <td>MANCHESTER U</td>
+    </tr>
+</table>
+<!--End calendar-->
+
+<!--Start match-->
+<div class="container">
+    <div class="match">
+        <div class="match-header">
+            <div class="match-tournament"><img src="https://assets.codepen.io/285131/pl-logo.svg"/>English Premier League </div>
+        </div>
+        <div class="match-content">
+            <div class="column">
+                <div class="team team--home">
+                    <div class="team-logo">
+                        <img src="https://givetour.s3.amazonaws.com/UploadFiles/Competitors/138976.jpg"/>
+                    </div>
+                    <h2 class="team-name">Manchester U</h2>
+                </div>
+            </div>
+            <div class="column">
+                <div class="match-details">
+                    <div class="match-date">
+                        <span id="timeDate"></span>
+                    </div>
+                    <div class="match-score">
+                        <span id="match-score" class="match-score-number"></span>
+                        <span class="match-score-divider">:</span>
+                        <span id="match-score-2" class="match-score-number"></span>
+                    </div>
+                    <button onclick="getRndinteger(0,6)" class="match-bet-place">Place a bet</button>
+                </div>
+            </div>
+            <div class="column">
+                <div class="tem team--away">
+                    <div class="team-logo">
+                        <img src="https://givetour.s3.amazonaws.com/UploadFiles/Competitors/138975.png"/>
+                    </div>
+                    <h2 class="team-name">Liverpool</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--End match-->
+</body>
+<style>
+    .img2{
+        width: 20px;
+        height: 20px;
+        max-width: 20px;
+        font-size: 9px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    .container{
+        position: absolute;
+        top: 0;
+        lerf: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    img{
+        display: block;
+        width: 20px;
+        margin-right: 12px;
+    }
+
+    span{
+        font-weight: 600;
+    }
+    body{
+        font-family: "Inter", sans-serif;
+        line-height: 1.5;
+        background-color: white;
+    }
+    .match{
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        min-width: 600px;
+        border-radius: 10px ;
+        box-shadow: 0 0 2px 0 white, 0 4px 4px 0 white;
+    }
+    .match-header{
+        display: flex;
+        border-bottom: 2px solid black;
+        padding: 0;
+    }
+    .match-tournament{
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+    }
+    .match-content{
+        display: flex;
+        position: relative;
+    }
+    .column{
+        padding: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: calc(100% / 3);
+    }
+    .team{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .team-logo{
+        width: 100px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background-color: white;
+    }
+    img {
+        width: 50px;
+    }
+    .team-name {
+        text-align: center;
+        margin-top: 24px;
+        font-size: 20px;
+        font-weight: 600;
+    }
+    .match-details{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .match-date {
+        font-size: 14px;
+        color: red;
+    }
+    .match-score{
+        margin-top: 12px;
+        display: flex;
+        align-items: center;
+    }
+    .match-score-number {
+        font-size: 48px;
+        font-weight: 600;
+        line-height: 1;
+    }
+    .match-score-divider {
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 1;
+        margin: 0 10px;
+    }
+    .match-bet-place{
+        position: absolute;
+        bottom: -16px;
+        left: 50%;
+        transform: translate(-50%);
+        border: 0;
+        background-color: darkslateblue;
+        border-radius: 6px;
+        padding: 10px 48px;
+        color: black;
+        font-size: 14px;
+    }
+</style>
+</html>
+<script src="manager.js"></script>
+

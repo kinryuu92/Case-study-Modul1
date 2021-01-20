@@ -24,6 +24,7 @@
     *{
         margin: 0;
         padding: 0;
+        box-sizing: border-box;
     }
     table{
         border-color: dodgerblue;
@@ -78,32 +79,121 @@
     }
     .profile{
         background:  url("https://www.vbetnews.com/wp-content/uploads/2019/12/skysports-ole-gunnar-solskjaer_4762890-1.jpg");
-
+        background-size: 100%;
     }
     body{
+        font-family: Arial;
         background-color: #10171f;
     }
+    .open-button {
+        background-color: black;
+        color: white;
+        padding: 10px 10px;
+        border: none;
+        cursor: pointer;
+       bottom: 20px;
+        width: 250px;
+        font-size: 20px;
+    }
+    .form-popup{
+        display: none;
+        position: fixed;
+        border: 3px solid #f1f1f1;
+        z-index: 9;
+    }
+    .container{
+        max-width: 250px;
+        padding: 10px;
+        background-color: white;
+    }
+    .container input[type = text]:focus{
+        background-color: #ddd;
+        outline: none;
+    }
+    .container input[type = text]{
+        width: 100%;
+        padding: 5px;
+        margin: 5px 0 22px 0;
+        border: none;
+        background: #f1f1f1 ;
+    }
+    .container .btn{
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 10px;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        margin-bottom: 10px;
+        opacity: 0.8;
+    }
+    .container .cancel{
+        background-color: red;
+    }
+    .container .btn:hover, .open-button:hover{
+        opacity: 1;
+    }
+    .ground{
+        max-width: 2000px;
+        background-color: black;
+        color: white;
+        font-size: 20px;
+    }
+    .small{
+        text-decoration: none;
+        color: white;
+    }
+    .small-2{
+        text-decoration: none;
+        color: white;
+        margin-left:90px;
+    }
+
+
 </style>
 <body>
-<div class="content">
-<img class="img2" src="https://lh3.googleusercontent.com/KNyKMfQqqVcLYAROYJ6KPW7nqmyMMcuc7npdzuzYI9KXhnZDJ3Wkfqy_apcQTDgq2QlNp9LzqQly06N5qsNxUOLT">
-<h5 class="title">MANCHESTER UNITED - MAIN SQUAD MANAGER</h5>
-    <p class="times" id="hvn"></p>
-</div>
-    <form>
-    <fieldset>
-        <legend class="trans">Transfer</legend>
-        <input type="text" id="player's-name" placeholder="Input player's name..." size="19px">
-        <input type="text" id="player's-position " placeholder="Input player's position..." size="19">
-        <input type="text" id="player's-age" placeholder="Input player's age..." size="19">
-        <input type="text" id="player's-wage" placeholder="Input player's wage..." size="19">
-        <input type="text" id="player's-skill" placeholder="Input player's skill..." size="19">
-        <input type="text" id="player's-country" placeholder="Input player's country..." size="19">
-        <input type="text" id="player's-img" placeholder="Input player's img..." size="19">
-        <button type="button" onclick="addPlayer()">Add</button>
-    </fieldset>
-</form>
+<!--<div class="content">-->
+<!--<img class="img2" src="https://lh3.googleusercontent.com/KNyKMfQqqVcLYAROYJ6KPW7nqmyMMcuc7npdzuzYI9KXhnZDJ3Wkfqy_apcQTDgq2QlNp9LzqQly06N5qsNxUOLT">-->
+<!--<h5 class="title">MANCHESTER UNITED - MAIN SQUAD MANAGER</h5>-->
+<!--</div>-->
 
+<!--add playe'r-->
+<div class="ground">
+    <button class="open-button" onclick="openForm()">OpenForm</button>
+    <a href="schedule.html" class="small">Schedule</a>
+    <a href="player.html" class="small-2">Player's</a>
+</div>
+<div class="form-popup" id="myForm">
+    <form class="container">
+        <label for="playerName"><b>Player Name</b></label>
+        <input type="text" id="player's-name" placeholder="Player's name..." size="19px">
+        <label for="position"><b>Position</b></label>
+        <input type="text" id="player's-position " placeholder="Player's position..." size="19">
+        <label for="age"><b>Age</b></label>
+        <input type="text" id="player's-age" placeholder="Player's age..." size="19">
+        <label for="wage"><b>Wage</b></label>
+        <input type="text" id="player's-wage" placeholder="Player's wage..." size="19">
+        <label for="skill"><b>Skill</b></label>
+        <input type="text" id="player's-skill" placeholder="Player's skill..." size="19">
+        <label for="country"><b>Country</b></label>
+        <input type="text" id="player's-country" placeholder="Player's country..." size="19">
+        <label for="img"><b>Img</b></label>
+        <input type="text" id="player's-img" placeholder="Player's img..." size="19">
+        <button type="submit" class="btn" onclick="addPlayer()">Add</button>
+        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+    </form>
+</div>
+<script>
+    function openForm(){
+        document.getElementById("myForm").style.display = "block";
+    }
+    function closeForm(){
+        document.getElementById("myForm").style.display = "none";
+    }
+</script>
+<!--End add playe'r-->
+
+<!--manager information-->
 <table id = "list" border="1px solid red" class="tab"></table>
 <section class="profile">
     <table class="table">
@@ -133,7 +223,9 @@
         </tr>
     </table>
 </section>
+<!--End manager information-->
 
 </body>
 </html>
+<script src="manager.js"></script>
 <script src="soccer.js"></script>

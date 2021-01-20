@@ -29,6 +29,7 @@
     saveData()
 }
     display()
+
     function addPlayer(){
     let name = document.getElementById("player's-name").value
     let position = document.getElementById("player's-position ").value
@@ -95,10 +96,5 @@ function showMenuHtml(){
     document.getElementById('list').innerHTML = str;
 }
 
-let today = new Date();
-let date = today.getDate() + '-' + (today.getMonth()+1) + '-' + today.getFullYear();
-let time = today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds();
-let dateTime = time + "<br>"+ date ;
-document.getElementById("hvn").innerHTML = dateTime;
 
 
