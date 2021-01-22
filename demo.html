@@ -3,24 +3,22 @@
 <title>W3.CSS Template</title>
 <meta charset="UTF-8">
 <body>
-<img alt="Tottenham" src="//ssl.gstatic.com/onebox/media/sports/logos/k3Q_mKE98Dnohrcea0JFgQ_48x48.png">
+<img id="img-push" src="">
+<button onclick="getImgpush()">Challenger</button>
+<script>
+    let img = [ "https://givetour.s3.amazonaws.com/UploadFiles/Competitors/138972.png",
+        "https://givetour.s3.amazonaws.com/UploadFiles/Competitors/138960.png",
+        "https://givetour.s3.amazonaws.com/UploadFiles/Competitors/138957.png",
+        "https://givetour.s3.amazonaws.com/UploadFiles/Competitors/138975.png",
+        "https://givetour.s3.amazonaws.com/UploadFiles/Competitors/138974.png",
+        "https://givetour.s3.amazonaws.com/UploadFiles/Competitors/138966.png",
+    ]
+    function getImgpush() {
+        let rd = Math.floor(Math.random() * img.length)
+        document.getElementById("img-push").src = img[rd];
+    }
 
-<img alt="Brington" src="//ssl.gstatic.com/onebox/media/sports/logos/EKIe0e-ZIphOcfQAwsuEEQ_48x48.png">
+</script>
 
-<img alt="Crystal palace" src="//ssl.gstatic.com/onebox/media/sports/logos/8piQOzndGmApKYTcvyN9vA_48x48.png">
-
-<img alt="West Brom" src="//ssl.gstatic.com/onebox/media/sports/logos/Im2UqFKvfm3TaM7R2RYkjw_48x48.png" >
-
-<img alt="Newcastle" src="//ssl.gstatic.com/onebox/media/sports/logos/96CcNNQ0AYDAbssP0V9LuQ_48x48.png">
-
-<img alt="Southampton" src="//ssl.gstatic.com/onebox/media/sports/logos/y1V4sm2SEBiWUPRIYl5rfg_48x48.png">
-
-<img alt="Chelsea" src="//ssl.gstatic.com/onebox/media/sports/logos/fhBITrIlbQxhVB6IjxUO6Q_48x48.png">
-
-<img alt="West ham" src="//ssl.gstatic.com/onebox/media/sports/logos/bXkiyIzsbDip3x2FFcUU3A_48x48.png">
-
-<img alt="Everton" src="//ssl.gstatic.com/onebox/media/sports/logos/C3J47ea36cMBc4XPbp9aaA_48x48.png">
-
-<img alt="Man City" src="//ssl.gstatic.com/onebox/media/sports/logos/z44l-a0W1v5FmgPnemV6Xw_48x48.png">
 </body>
 </html>

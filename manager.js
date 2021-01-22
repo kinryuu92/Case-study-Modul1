@@ -91,3 +91,14 @@ function getRndinteger(min,max) {
      document.getElementById('match-score-2').innerHTML = Math.floor(Math.random() * (max - min)) + min;
 }
 
+let img = [ "https://givetour.s3.amazonaws.com/UploadFiles/Competitors/138972.png",
+    "https://givetour.s3.amazonaws.com/UploadFiles/Competitors/138960.png",
+    "https://givetour.s3.amazonaws.com/UploadFiles/Competitors/138957.png",
+    "https://givetour.s3.amazonaws.com/UploadFiles/Competitors/138975.png",
+    "https://givetour.s3.amazonaws.com/UploadFiles/Competitors/138974.png",
+    "https://givetour.s3.amazonaws.com/UploadFiles/Competitors/138966.png",
+]
+function getImgpush() {
+    let rd = Math.floor(Math.random() * img.length)
+    document.getElementById("img-push").src = img[rd];
+}
